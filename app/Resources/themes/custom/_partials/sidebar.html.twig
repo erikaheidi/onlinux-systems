@@ -1,0 +1,38 @@
+<div class="column blog-sidebar">
+    <div class="px-4 py-6 mb-6 bg-gray-50 mt-6 rounded-md shadow-lg">
+        <div class="text-center mx-auto">
+            <a href="{{ site_url() }}"><img class="mx-auto rounded-full" src="/img/onlinux_logo.png"></a>
+        </div>
+
+        <p class="text-justify px-4 py-2">{{ site_about() }}</p>
+    </div>
+
+    <div class="px-4 py-6 mb-6 bg-gray-50 mt-10 rounded-md shadow-lg">
+        <h3 class="text-2xl mb-6">Topics</h3>
+            <ul class="divide-y divide-gray-200 px-2">
+                {% for tag_name, posts in tag_list() %}
+                    <li class="py-2 px-2 hover:bg-gray-200"><a href="/tag/{{ tag_name }}">{{ tag_name }}</a></li>
+                {% endfor %}
+            </ul>
+    </div>
+
+    <div class="px-4 py-6 mb-6 bg-gray-50 mt-10 rounded-md shadow-lg">
+        <h3 class="text-2xl mb-6">Links</h3>
+            <ul class="menu-list">
+                {% for title,link in social_links() %}
+                    {%  if link %}<li><a href="{{ link }}" title="{{ title }}"><span class="icon"><i class="fab fa-{{ title|lower }}"></i></span> {{ title }}</a></li>{% endif %}
+                {% endfor %}
+            </ul>
+    </div>
+
+    <div class="text-center text-sm text-white">
+        <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">
+            <a property="dct:title" rel="cc:attributionURL" href="https://onlinux.systems">OnLinux</a>
+            by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://twitter.com/erikaheidi">Erika Heidi</a>
+            is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY 4.0</a></p>
+        <p><a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">
+                <img class="float-left w-10 p-1" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt="cc">
+                <img class="float-left w-10 p-1" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt="cc">
+            </a></p>
+    </div>
+</div><!-- /.blog-sidebar -->
