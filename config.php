@@ -10,7 +10,7 @@ return [
     'site_name' => 'On Linux Systems',
     'site_author' => envconfig('SITE_AUTHOR', '@erikaheidi'),
     'site_description' => envconfig('SITE_DESC', 'Guides and reviews of hardware / software running on Linux'),
-    'site_url' => envconfig('SITE_URL', 'http://localhost:8000'),
+    'site_url' => envconfig('SITE_URL', 'https://onlinux.systems'),
     'site_root' => envconfig('SITE_ROOT', '/'),
     'site_about' => envconfig('SITE_ABOUT', '_p/about'),
     # Set site_index if you want a custom index page
