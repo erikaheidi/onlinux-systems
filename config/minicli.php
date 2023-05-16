@@ -21,7 +21,8 @@ return [
     'stencil_dir' => __DIR__ . '/../app/Resources/stencil',
     'stencil_locations' => [
         'post' => __DIR__ . '/../content/post',
-        'page' => __DIR__ . '/../content/page'
+        'page' => __DIR__ . '/../content/page',
+        'guide' => __DIR__ . '/../content/guides'
     ],
     'rss_feed' => php_sapi_name() !== 'cli' ? 'feed' : 'feed.rss',
 ];
