@@ -40,6 +40,20 @@ Follow this guide on how to set up your Linux VM for Ubuntu 23.04:
 
 Once you're on the Ubuntu 23.04 boot screen, you can skip to **Step 2**.
 
+### Creating a Backup
+For backups, the easiest way in my opinion is using a removable hard disk. Needless to say, the disk must have enough space for the backup. To avoid copying stuff I don't need, I usually do a cleanup in my home folder before copying the files - specially the Downloads, Pictures, and Videos folders.
+
+If you're on Ubuntu, check your `/media` folder after connecting your external drive, you should be able to identify where it is mounted.
+
+From the command line, you can run the following command to create a `backups` folder and copy your home folder to an external disk mounted at `/media/user/external-disk`:
+
+```shell
+mkdir -p /media/user/external-disk/backups
+cp -R /home/user /media/user/external-disk/backups
+```
+
+This will copy all hidden folders as well, so your SSH keys will be included in the backup.
+
 ## Step 1: Boot from startup disk
 Depending on your computer and the setup program it runs, you will have to press a special key to either choose the boot device directly or access the BIOS setup program and adjust your settings in order to boot from your new Ubuntu boot disk. In most computers, this key will be `F12`.
 
