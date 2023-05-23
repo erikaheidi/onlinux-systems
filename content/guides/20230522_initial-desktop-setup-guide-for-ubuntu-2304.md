@@ -2,6 +2,7 @@
 title: Initial Desktop Setup Guide for Ubuntu 23.04
 description: In this step-by-step guide with screenshots, follow my initial desktop setup for Ubuntu 23.04: restoring backup and SSH keys, customizing appearance, and installing basic software.
 tags: ubuntu, ubuntu2304, desktop
+author_twitter: erikaheidi
 cover_image: https://cdn.eheidi.dev/ubuntu2304/setup/setup2304.png
 ---
 
