@@ -90,7 +90,12 @@ You should get a message like this, informing your username and letting you know
 Hi erikaheidi! You've successfully authenticated, but GitHub does not provide shell access.
 ```
 
-Your SSH keys are restored and good to go.
+Your SSH keys are restored and good to go. While you're at it, configure your git name and email:
+
+```shell
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
+```
 
 ### Restoring other Files
 
