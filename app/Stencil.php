@@ -13,7 +13,7 @@ class Stencil
 
     public function applyTemplate($template_name, array $variables = []): string
     {
-        $template = file_get_contents($this->stencil_dir . '/' . $template_name . '.tpl');
+        $template = file_get_contents($this->stencil_dir.'/'.$template_name.'.tpl');
 
         foreach ($variables as $variable_name => $variable_value) {
             $template = str_replace("{{ $variable_name }}", $variable_value, $template);

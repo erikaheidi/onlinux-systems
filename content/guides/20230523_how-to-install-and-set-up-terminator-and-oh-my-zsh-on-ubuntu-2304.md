@@ -3,7 +3,7 @@ title: How to Install and Set Up Terminator + Oh My ZSH! on Ubuntu 23.04
 description: In this step-by-step guide, learn how to install and set up Terminator and Oh My ZSH! on Ubuntu 23.04 for a pretty and handy terminal.
 tags: ubuntu2304, ubuntu, terminal, ohmyzsh
 author_twitter: erikaheidi
-cover_image: https://cdn.eheidi.dev/ubuntu2304/setup/terminator.png
+cover_image: https://onlinux.ams3.digitaloceanspaces.com/ubuntu2304/setup/terminator.png
 ---
 
 I've been a fan and loyal user of [Oh-my-Zsh!](https://ohmyz.sh/) for many years; it makes my shell more useful with little things such as git branch information and smart autocomplete. 
@@ -24,30 +24,30 @@ sudo apt install terminator
 
 When the installation is finished, hit the window key and type `terminator` to open Terminator from the Ubuntu desktop. It will look like this:
 
-![Terminator before customization](https://cdn.eheidi.dev/ubuntu2304/setup/05.png)
+![Terminator before customization](https://onlinux.ams3.digitaloceanspaces.com/ubuntu2304/setup/05.png)
 
 Let's configure it so it looks nicer. Right-click on the terminal window and open "Preferences" on the menu. Go to the "Profiles" tab to customize the default profile.
 Later on you can create multiple profiles changing terminal font size and colors, so for instance you can have a "screen" profile for when you need to present content in your terminal.
 
 On the "General" tab, **uncheck** "Show titlebar":
 
-![Terminator disable title bar](https://cdn.eheidi.dev/ubuntu2304/setup/06.png)
+![Terminator disable title bar](https://onlinux.ams3.digitaloceanspaces.com/ubuntu2304/setup/06.png)
 
 Then, go to the "Background" tab and set transparent background with a shade of 0.80:
 
-![Terminator background color](https://cdn.eheidi.dev/ubuntu2304/setup/07.png)
+![Terminator background color](https://onlinux.ams3.digitaloceanspaces.com/ubuntu2304/setup/07.png)
 
 After the change, close the preferences window. Your Terminator should now look similar to this:
 
-![Terminator with transparent background](https://cdn.eheidi.dev/ubuntu2304/setup/08.png)
+![Terminator with transparent background](https://onlinux.ams3.digitaloceanspaces.com/ubuntu2304/setup/08.png)
 
 To create tiled windows, right-click on the terminal window and select "split horizontally" or "split vertically":
 
-![Terminator split](https://cdn.eheidi.dev/ubuntu2304/setup/09.png)
+![Terminator split](https://onlinux.ams3.digitaloceanspaces.com/ubuntu2304/setup/09.png)
 
 Each new window can be split again, so you have infinite ways to customize the tiles:
 
-![Terminator split with 3 tiles](https://cdn.eheidi.dev/ubuntu2304/setup/10.png)
+![Terminator split with 3 tiles](https://onlinux.ams3.digitaloceanspaces.com/ubuntu2304/setup/10.png)
 
 For quick access, pin it to your Dock:
 
@@ -56,7 +56,7 @@ For quick access, pin it to your Dock:
 - select "Pin to Dash" to pin it to the Dock.
 
 
-![Terminator pin to Dash / Dock](https://cdn.eheidi.dev/ubuntu2304/setup/11.png)
+![Terminator pin to Dash / Dock](https://onlinux.ams3.digitaloceanspaces.com/ubuntu2304/setup/11.png)
 
 ## Step 2: Install Oh-My-Zsh!
 
@@ -73,7 +73,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 ```
 The installation will prompt you to confirm that you want to use `zsh` as default bash. Confirm to continue. When it finishes, you should get a screen similar to this:
 
-![Oh my Zsh installed](https://cdn.eheidi.dev/ubuntu2304/setup/12.png)
+![Oh my Zsh installed](https://onlinux.ams3.digitaloceanspaces.com/ubuntu2304/setup/12.png)
 
 You'll need to restart Terminator in order to load the ZSH shell with OMZ.
 
@@ -92,7 +92,7 @@ Here are some nice themes to give a try:
 
 I personally have been using the Agnoster theme for years, but decided to try something a bit more resourceful and the Powerlevel10k theme offers a lot of extras, and it's super easy to configure with their built-in wizard. This is how my terminal looks like now:
 
-![Oh my Zsh with Powerlevel10k theme installed](https://cdn.eheidi.dev/ubuntu2304/setup/13.png)
+![Oh my Zsh with Powerlevel10k theme installed](https://onlinux.ams3.digitaloceanspaces.com/ubuntu2304/setup/13.png)
 
 For the built-in themes, you just need to edit your `.zshrc` and change the `ZSH_THEME` env var to the name of the theme you want to use. Check the wiki page to see if the theme has special configuration options.
 
@@ -115,7 +115,7 @@ Then, go to your `Downloads` folder, double-click each font and click on the "In
 
 With the fonts installed, you'll need to update your Terminator profile to use the new font. Right-click on the Terminator window, then access "Preferences" on the menu, and access the "Profiles" tab. With the `default` profile selected, **uncheck** the option that says "Use the system fixed width font". Then click on the font select box and choose **MesloLGS NF Regular** font. You may want to increase the font size, while you're at it. Close the window when you're finished and Terminator should now be using the recommended font for Powerlevel10k.
 
-![Changing Terminator font](https://cdn.eheidi.dev/ubuntu2304/setup/terminator-font.png)
+![Changing Terminator font](https://onlinux.ams3.digitaloceanspaces.com/ubuntu2304/setup/terminator-font.png)
 
 Next, install Powerlevel10k by cloning it into your OMZ themes folder:
 
@@ -134,7 +134,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 After that, close and open again Terminator to load the new theme. The first time you run OMZ with the Powerlevel10k theme, a CLI wizard script will guide you through the prompt configuration. You can choose from a wide variety of options and styles, it's very intuitive.
 
-![Setting up the Powerlevel10k theme with p10k script](https://cdn.eheidi.dev/ubuntu2304/setup/15.png)
+![Setting up the Powerlevel10k theme with p10k script](https://onlinux.ams3.digitaloceanspaces.com/ubuntu2304/setup/15.png)
 
 It's worth noting that you can run this configuration wizard again at any time to reconfigure your prompt:
 
@@ -146,7 +146,7 @@ After you're satisfied with your initial prompt setup, there's a few more settin
 
 For instance, I enabled the PHP-related elements, so when I open a git-based PHP project I see the PHP version currently set up within the system:
 
-![Prompt elements](https://cdn.eheidi.dev/ubuntu2304/setup/prompt_elements.png)
+![Prompt elements](https://onlinux.ams3.digitaloceanspaces.com/ubuntu2304/setup/prompt_elements.png)
 
 Don't forget to close and re-open Terminator to source the changes you made to the `~/.p10k.zsh` file.
 
