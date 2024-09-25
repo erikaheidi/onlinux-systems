@@ -16,11 +16,11 @@ class Embed implements CustomTagParserInterface
 
     public function parse($tag_value, array $params = []): ?string
     {
-        $path = __DIR__ . '/../../content/'. $this->getContentType() . '/' . $tag_value . '.md';
-        $content = new Content();
+        $path = __DIR__.'/../../content/'.$this->getContentType().'/'.$tag_value.'.md';
+        $content = new Content;
         try {
             $content->load($path);
-            $parser = new ContentParser();
+            $parser = new ContentParser;
             $article = $parser->parse($content);
 
             return $this->getEmbed($article);
@@ -33,13 +33,13 @@ class Embed implements CustomTagParserInterface
     {
         return '<div class="grid grid-cols-4 gap-4 border">
             <div class="p-4">
-                  <a href="/'. $this->getContentType() .'/'. $content->getSlug() .'" title="Check the overview of '. $content->getAlternateTitle() .'">' .
-            '<img src="'. $content->frontMatterGet('cover_image') .'" class="w-1/3 rounded object-left" alt="Thumbnail">  
+                  <a href="/'.$this->getContentType().'/'.$content->getSlug().'" title="Check the overview of '.$content->getAlternateTitle().'">'.
+            '<img src="'.$content->frontMatterGet('cover_image').'" class="w-1/3 rounded object-left" alt="Thumbnail">  
                   </a>           
             </div>
             <div class="col-span-2">
-                  <h4><a href="/' . $this->getContentType() . '/'. $content->getSlug() .'" title="Check the overview of '. $content->frontMatterGet('title') .'">' . $content->frontMatterGet('title') . '</a></h4>
-                  <p class="text-sm">'. $content->frontMatterGet('description') .'</p>
+                  <h4><a href="/'.$this->getContentType().'/'.$content->getSlug().'" title="Check the overview of '.$content->frontMatterGet('title').'">'.$content->frontMatterGet('title').'</a></h4>
+                  <p class="text-sm">'.$content->frontMatterGet('description').'</p>
             </div>
         </div>';
     }

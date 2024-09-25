@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 return [
     /*****************************************************************************
      * End-to-end tests require you to set here the app url for testing.

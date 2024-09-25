@@ -2,7 +2,7 @@
 title: How to create an Ubuntu 23.04 startup disk on Ubuntu systems
 description: Learn how to create an Ubuntu 23.04 startup / boot disk using the startup disk creation tool on Ubuntu systems
 tags: guides, ubuntu, installation
-cover_image: https://cdn.eheidi.dev/ubuntu2304/blog-startupdisk.png
+cover_image: https://onlinux.ams3.digitaloceanspaces.com/ubuntu2304/blog-startupdisk.png
 ---
 
 ## Introduction
@@ -32,7 +32,7 @@ Open the **Startup Disk Creation** tool by hitting the `Windows` key and then se
 
 The tool is fairly simple, with one top area for the ISO selection and a bottom area for the device selection.
 
-![Ubuntu Disk Creation Tool](https://cdn.eheidi.dev/ubuntu2304/ubuntu2304-disk.png)
+![Ubuntu Disk Creation Tool](https://onlinux.ams3.digitaloceanspaces.com/ubuntu2304/ubuntu2304-disk.png)
 
 In the top section you should select your preferred ISO file, in this guide I'm using Ubuntu 23.04 "Lunar Lobster". 
 In the bottom section, select the removable media device you want to use as startup disk.

@@ -1,33 +1,25 @@
 <?php
 
-require __DIR__ . '/../vendor/autoload.php';
+require __DIR__.'/../vendor/autoload.php';
 
 use App\LiquidTag\Device;
 use App\LiquidTag\Embed;
 use App\LiquidTag\Guide;
 use App\LiquidTag\YouTube;
-use Minicli\App;
-use Librarian\Provider\TwigServiceProvider;
-use Librarian\Provider\RouterServiceProvider;
 use Librarian\Exception\RouteNotFoundException;
-use Librarian\Provider\ContentServiceProvider;
-use Librarian\Provider\LibrarianServiceProvider;
+use Librarian\Provider\RouterServiceProvider;
 use Librarian\Response;
+use Minicli\App;
 
-$app = new App(load_config());
-
-$app->addService('twig', new TwigServiceProvider());
-$app->addService('router', new RouterServiceProvider());
-$app->addService('content', new ContentServiceProvider());
-$app->addService('librarian', new LibrarianServiceProvider());
+$app = new App;
+$app->addService('router', new RouterServiceProvider);
 
 $app->librarian->boot();
 
-$app->content->registerTagParser('newtube', new YouTube());
-$app->content->registerTagParser('device', new Device());
-$app->content->registerTagParser('embed', new Embed());
-$app->content->registerTagParser('guide', new Guide());
-
+$app->content->registerTagParser('newtube', new YouTube);
+$app->content->registerTagParser('device', new Device);
+$app->content->registerTagParser('embed', new Embed);
+$app->content->registerTagParser('guide', new Guide);
 
 try {
     /** @var RouterServiceProvider $router */
