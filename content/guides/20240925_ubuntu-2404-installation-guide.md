@@ -2,7 +2,7 @@
 title: Ubuntu 24.04 Installation Guide
 description: Learn step-by-step how to install Ubuntu 24.04 on a computer or VM
 tags: linux, ubuntu
-cover_image: https://picsum.photos/780/300
+cover_image: https://onlinux.erikaheidi.com/ubuntu2404/ubuntu2404-guide.png
 ---
 
 
