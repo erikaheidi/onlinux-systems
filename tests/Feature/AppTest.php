@@ -24,8 +24,6 @@ it('Boots the app and loads custom Service Providers', function () {
 
 it('Boots the app and loads content', function () {
     /** @var ContentServiceProvider $contentProvider */
-    //$contentProvider = $this->app->content;
-    //var_dump($contentProvider->fetchAll());
     $content = $this->app->content->fetch('guides/20220323_how-to-set-up-elgatos-stream-deck-on-ubuntu-linux-2110');
     expect($content->frontMatterGet('title'))->toBe('How to Set Up Elgato\'s Stream Deck on Ubuntu Linux 21.10')
         ->and($content->body_markdown)->toBeString();
